@@ -1,0 +1,38 @@
+@use "./variables.scss" as *;
+
+.countries-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 70%;
+  max-width: 400px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  @media screen and (min-width: $mobile-bp) {
+    gap: 35px;
+    width: 80%;
+    max-width: 900px;
+    align-items: center;
+  }
+  .country {
+    background-color: $bg-color;
+    border: 0.8px solid $border-color;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: 25%;
+    text-wrap: nowrap;
+    @media screen and (min-width: $mobile-bp) {
+      width: 65px;
+    }
+    &:hover {
+      background-color: $border-color;
+      transition: all 0.3s ease;
+      transform: scale(1.05);
+    }
+  }
+}

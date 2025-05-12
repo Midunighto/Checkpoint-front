@@ -1,0 +1,14 @@
+@use "./variables.scss" as *;
+
+.country-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  h1 {
+    align-self: center;
+    font-size: 4rem;
+  }
+  span {
+    font-weight: 600;
+  }
+}

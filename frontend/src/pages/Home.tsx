@@ -1,3 +1,11 @@
+import CountryList from "../components/CountryList";
+import CreateCountry from "../components/CreateCountry";
+
 export function HomePage() {
-  return <p>You should start working here!</p>;
+  return (
+    <>
+      <CreateCountry />
+      <CountryList />
+    </>
+  );
 }

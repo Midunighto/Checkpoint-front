@@ -1,0 +1,63 @@
+@use "./variables.scss" as *;
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 0.8px solid $border-color;
+  background-color: $secondary-bg-color;
+  padding: 20px;
+  width: 70%;
+  max-width: 400px;
+  @media screen and (min-width: $mobile-bp) {
+    flex-direction: row;
+    gap: 35px;
+    width: 80%;
+    max-width: 900px;
+    align-items: center;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+    }
+    input,
+    select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      &:focus {
+        outline: none;
+        border-color: $main-color;
+      }
+      @media screen and (min-width: $mobile-bp) {
+        max-width: 150px;
+        width: 100%;
+      }
+    }
+  }
+  button {
+    background-color: $main-color;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    &:hover {
+      background-color: $main-color-hover;
+      transition: all 0.3s ease;
+      transform: scale(1.05);
+    }
+    @media screen and (min-width: $mobile-bp) {
+      width: 75px;
+      height: 60px;
+      margin-left: 20px;
+    }
+  }
+}
